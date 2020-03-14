@@ -1,0 +1,36 @@
+<div class="github-card user-card">
+    <div class="header"></div>
+    <a href="{{user.html_url}}" target="_blank" class="avatar">
+      <img [src]="user.Foto+'&s=80'" [alt]="user.name">
+    </a>
+    <div class="content">
+      <h1>{{user.name}}</h1>
+      <span>{{user.Creado | date}}</span> -
+      <span>{{user.Ubicacion}}
+        <i class="fas fa-map-marker"></i>
+      </span>
+      <div class="alert alert-success">
+        <p class="mb-0">{{user.Biografia}}</p>
+      </div>
+      <ul class="status">
+        <li>
+          <a [href]="'https://github.com/'+user.Nombre+'?tab=repositories'">
+            <strong>{{user.Repositorios}}</strong>
+            <i class="fab fa-github"></i>Repos
+          </a>
+        </li>
+        <li>
+          <a href="{{user.html_url}}">
+            <strong>{{user.Gists}}</strong>
+            <i class="fas fa-book-open"></i>Gists
+          </a>
+        </li>
+        <li>
+          <a [href]="'https://github.com/'+user.Nombre+'/followers'">
+            <strong>{{user.followers}}</strong>
+            <i class="fas fa-users"></i>Followers
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
